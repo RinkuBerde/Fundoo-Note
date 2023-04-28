@@ -15,29 +15,26 @@
     <div class="third-section">
         <span>Use your Google Account</span>
     </div>
-    <form >
+    <form [formGroup]="loginForm">
+        <div class="input-field">
+            <mat-form-field appearance="outline" style="width: 350px; margin-left: 30px;">
+                <mat-label>Email or phone</mat-label>
+                <input matInput placeholder="email" type="email" formControlName="email" style="width: 100%;">
+            </mat-form-field>
 
-        <div class="form-field">
-            <div class="input-field">
-                <mat-form-field appearance="outline" style="width: 350px; margin-left: 30px;">
-                    <mat-label>Email or phone</mat-label>
-                    <input matInput placeholder="email" type="text" formControlName="email" style="width: 100%;">
-                </mat-form-field>
-            </div>
-           
+            <mat-form-field appearance="outline" style="width: 350px; margin-left: 30px;">
+                <mat-label>password</mat-label>
+                <input matInput placeholder="password" type="password" formControlName="password" style="width: 100%;">
+            </mat-form-field>
             <div class="login">
-                <a  href="">forget email?</a>
-            </div>
-            <div class="msg-field">
-                Not your computer? Use Guest mode to sign in privately.
-                <a href="#" class="link">Learn More</a>
+                <a href="" routerLink="/forgot-password">forget password?</a>
             </div>
             <div class="submit-field">
                 <div class="sign">
-                    <h3><a  class="link">Create account</a></h3>
+                    <h3><a class="link" routerLink="/signup">Create account</a></h3>
                 </div>
                 <div>
-                    <button  class="button">Next</button>
+                    <button class="button" (click)="onlogin()">Next</button>
                 </div>
             </div>
         </div>

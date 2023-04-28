@@ -10,6 +10,9 @@ import { MatInputModule } from '@angular/material/input';
 import { LoginComponent } from './components/login/login.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -22,9 +25,11 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,MatFormFieldModule,MatInputModule,
+    AppRoutingModule,MatFormFieldModule,MatInputModule,FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
     
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

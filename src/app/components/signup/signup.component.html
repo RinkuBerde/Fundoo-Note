@@ -14,7 +14,7 @@
             <div class="header-name">
                 <h1>Create your Google Account</h1>
             </div>
-            <form>
+                <form [formGroup]="signupForm" (ngSubmit)="signup()">
                 <div class="name-block">
                     <mat-form-field appearance="outline">
                         <mat-label>First Name</mat-label>
@@ -65,7 +65,6 @@
             </div>
             </form>
         </div>
-
         <div class="logo-block">
             <figure class="img">
                 <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt width="244" height="244">

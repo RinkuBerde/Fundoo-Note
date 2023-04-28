@@ -1,12 +1,11 @@
 .header-container {
     border: 1px solid #DADCE0;
-    ;
     border-radius: 10px;
-    width: 25.2rem;
+    width: 27.2rem;
     position: relative;
-    top: 70px;
+    top: 40px;
     left: 500px;
-    height: 500px;
+    height: 550px;
 }
 
 .logo ul {
@@ -89,27 +88,17 @@
 
 .login {
     position: relative;
-
     top: px;
     display: flex;
     justify-content: flex-start;
     width: 350px;
-    margin-left: 28px;
+    margin-left: 30px;
     margin-bottom: -3rem;
 }
 
 .login a {
     text-decoration: none;
     color: #1a73e8;
-}
-
-.msg-field {
-    padding-bottom: 0px;
-    padding-top: 0px;
-    position: relative;
-    top: 80px;
-    width: 350px;
-    margin-left: 30px;
 }
 
 .submit-field {
@@ -120,8 +109,6 @@
     width: 350px;
     margin-left: 25px;
     height: 50px;
-
-
 }
 
 .button {
@@ -141,8 +128,8 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     position: relative;
-    right: 40px;
-    bottom: 4px;
+    right: 1px;
+    bottom: 1px;
 
 }
 
@@ -151,9 +138,11 @@
     text-decoration: none;
     cursor: pointer;
     font-family: monospace;
-    font-size: 18px;
+    font-size: 16px;
+    margin-left: 2px;
     padding: 10px 10px 8px;
-    font-size: 30;
+
+
 }
 
 .mat-form-field {
@@ -171,4 +160,3 @@
     text-decoration: none;
 
 }
-
