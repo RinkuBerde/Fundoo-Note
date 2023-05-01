@@ -1,74 +1,74 @@
-<div class="header-container">
-    <div class="form-container">
-        <div class="logo">
-            <ul>
-                <li class="G">G</li>
-                <li class="o">o</li>
-                <li class="o-">o</li>
-                <li class="g">g</li>
-                <li class="l">l</li>
-                <li class="e">e</li>
-            </ul>
+<div class="container">
+    <div class="Firstdiv">
+        <div class="fundoo">
+            <b class="F">F</b>
+            <b class="u">u</b>
+            <b class="n">n</b>
+            <b class="d">d</b>
+            <b class="o">o</b>
+            <b class="o-o">o</b>
         </div>
-        <div class="form-block">
-            <div class="header-name">
-                <h1>Create your Google Account</h1>
-            </div>
-                <form [formGroup]="signupForm" (ngSubmit)="signup()">
-                <div class="name-block">
-                    <mat-form-field appearance="outline">
-                        <mat-label>First Name</mat-label>
-                        <input matInput placeholder="FirstName" type="text" formControlName="firstName">
-                    </mat-form-field>
+        <div class="InnerDiv">
+            <form [formGroup]="signupForm" (ngSubmit)="signup()">
+                <div class="div">
+                    <span>
+                        <h1 class="account">Create your Fundoo Account</h1>
+                        <h4>to continue to Gmail</h4>
+                    </span>
 
-                    <mat-form-field appearance="outline" style="width: 195px;">
-                        <mat-label>Last Name</mat-label>
-                        <input matInput placeholder="LastName" type="text" formControlName="lastName">
-                    </mat-form-field>
-                </div>
-                <div class="email-container">
-                    <mat-form-field class="email-field" appearance="outline" style="width: 95%;">
+                    <div class="name">
+                        <mat-form-field appearance="outline" class="name-mat">
+                            <mat-label>First name</mat-label>
+                            <input matInput placeholder="" formControlName="firstname">
+                            <mat-error>firstname is required</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="last-name">
+                            <mat-label>Last name</mat-label>
+                            <input matInput placeholder="" formControlName="lastname">
+                            <mat-error>lastname is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <mat-form-field appearance="outline" class="user-name">
                         <mat-label>Username</mat-label>
-                        <input matInput placeholder="Enter Email" type="text" formControlName="email">
-                        <mat-hint>You can use latters,number & periods</mat-hint>
+                        <input matInput placeholder="" formControlName="email">
+                        <mat-error>Username is required</mat-error>
                     </mat-form-field>
+                    <div class="caption">
+                        <p>You can use letters , numbers & periods </p>
+                    </div>
+                    <div class="name">
+                        <mat-form-field appearance="outline" class="name-mat">
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="" type="password" formControlName="password">
+                            <mat-error>Password is required</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="last-name">
+                            <mat-label>Confirm</mat-label>
+                            <input matInput placeholder="" type="password" formControlName="confirmPassword">
+                            <mat-error>Confirm Password is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="caption">
+                        <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
+                    </div>
+                    <div class="CheckBox">
+                        <mat-checkbox class="check">Show password</mat-checkbox>
+                        <!-- <mat-checkbox class="check" (change)="showConfirmPassword = !showConfirmPassword">Show password</mat-checkbox> -->
+                    </div>
+                    <div class="Button">
+                        <button class="login" routerLink="/login"><b>Sign in instead</b></button>
+                        <button class="mat-raised-button" color="primary">Next</button>
+                    </div>
                 </div>
-                <div class="mail-msg">
-                    <h3><a href="#" class="link">Use my current email address instead</a></h3>
-                </div>
-                <div class="password-field">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Password</mat-label>
-                        <input matInput placeholder="Enter Password" type="password" formControlName="password">
-                    </mat-form-field>
-
-                    <mat-form-field appearance="outline" style="width: 195px;">
-                        <mat-label>Confirm</mat-label>
-                        <input matInput placeholder="Enter Confirm" type="text" formControlName="confirmPassword">
-
-                    </mat-form-field>
-                </div>
-                <div class="pass-msg">
-                    <p>Use 8 or more characters with a mix of letters, numbers & </p>
-                    <p> symbols</p>
-                </div>
-                <div class="check">
-                    <input type="checkbox"> show password
-                </div>
-              <div class="submit-field">
-                <div class="sign">
-                    <h3><a  href="">Sign in instead</a></h3>
-                  </div>
-                  <div>
-                    <button class="button" >Next</button>        
-                   </div> 
-            </div>
             </form>
-        </div>
-        <div class="logo-block">
-            <figure class="img">
-                <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt width="244" height="244">
-                <figcaption class="caption">One account. All of Google working for you.</figcaption>
-            </figure>
+            <div class="imagediv">
+                <div>
+                    <img class="image" src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="">
+                </div>
+                <div class="para">
+                    <p>One account. All of Fundoo working for you.</p>
+                </div>
+            </div>
         </div>
     </div>
+</div>

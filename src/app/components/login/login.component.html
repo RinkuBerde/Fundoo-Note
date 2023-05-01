@@ -1,42 +1,46 @@
-<div class="header-container">
-    <div class="logo">
-        <ul>
-            <li class="G">G</li>
-            <li class="o">o</li>
-            <li class="o-">o</li>
-            <li class="g">g</li>
-            <li class="l">l</li>
-            <li class="e">e</li>
-        </ul>
-    </div>
-    <h1 class="second-section">
-        <span>Sign In</span>
-    </h1>
-    <div class="third-section">
-        <span>Use your Google Account</span>
-    </div>
-    <form [formGroup]="loginForm">
-        <div class="input-field">
-            <mat-form-field appearance="outline" style="width: 350px; margin-left: 30px;">
-                <mat-label>Email or phone</mat-label>
-                <input matInput placeholder="email" type="email" formControlName="email" style="width: 100%;">
-            </mat-form-field>
-
-            <mat-form-field appearance="outline" style="width: 350px; margin-left: 30px;">
-                <mat-label>password</mat-label>
-                <input matInput placeholder="password" type="password" formControlName="password" style="width: 100%;">
-            </mat-form-field>
-            <div class="login">
-                <a href="" routerLink="/forgot-password">forget password?</a>
-            </div>
-            <div class="submit-field">
-                <div class="sign">
-                    <h3><a class="link" routerLink="/signup">Create account</a></h3>
+<div class="Container">
+    <div class="Div">
+        <div class="funDo">
+            <b class="F">F</b>
+            <b class="u">u</b>
+            <b class="n">n</b>
+            <b class="D">d</b>
+            <b class="o">o</b>
+            <b class="oo">o</b>
+        </div>
+        <div>
+            <p class="span">Sign in</p>
+        </div>
+        <div>
+            <p class="font"> to continue to Fundoo </p>
+        </div>
+        <div class="InnerDiv">
+            <form [formGroup]=" loginForm">
+                <div>
+                    <mat-form-field appearance="outline" class="email">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" formControlName="email">
+                        <mat-error>Enter valid Email</mat-error>
+                    </mat-form-field>
                 </div>
                 <div>
-                    <button class="button" (click)="onlogin()">Next</button>
+                    <mat-form-field appearance="outline" class="password">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" type="password" formControlName="password">
+                        <mat-error>Password is required</mat-error>
+                    </mat-form-field>
                 </div>
-            </div>
+                <button class="Forgot" routerLink="/forgot-password"><b>Forgot Password?</b></button>
+                <div> Not your computer? Use Guest mode to sign in privately.<br>
+                    <button class="signin">
+                        <a href="https://support.google.com/chrome/answer/6130773?hl=en">Learn more</a>
+                    </button>
+                </div>
+                <div class="matButton">
+                    <button class="signin" routerLink="/signup"><b>Create account</b></button>
+                    <button class="mat-raised-button" (click)="onlogin()"> Next </button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 </div>

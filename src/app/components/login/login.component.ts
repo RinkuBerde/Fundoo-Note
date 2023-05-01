@@ -1,29 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/service/userService/user.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent  implements OnInit  {
+export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private userService: UserService) { }
 
   ngOnInit() {
-    this.loginForm = this.formBuilder.group({      
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(6)]],  
+    this.loginForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
-}
-  onlogin(){
-    if (this.loginForm .valid){
-     let  data={
-        email:this.loginForm.value.email,
-        password:this.loginForm.value.password
-      }
-      console.log(data)
-    }
   }
+  onlogin() {
+    if (this.loginForm.valid) {
+      console.log(this.loginForm.value)
+      let data = {
+        email: this.loginForm.value.email,
+        password: this.loginForm.value.password,
+        service: "advance"
+      }
+      // console.log(data)
+      this.userService.login(data).subscribe((result: any) => {
+        console.log("login successfully", result);
+      })
+    }
+    else
+      console.log("data not get");
+  }
+
 }

@@ -15,8 +15,8 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
     this.signupForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],
@@ -24,17 +24,21 @@ export class SignupComponent implements OnInit {
   }
 
   signup() {
-    console.log(this.signupForm.value);
-    let reqdata = {
-      firstName: this.signupForm.value.firstName,
-      lastName: this.signupForm.value.lastName,
-      email: this.signupForm.value.email,
-      password: this.signupForm.value.confirmPassword,
-      service: "advance"
+    if (this.signupForm.valid) {
+      console.log(this.signupForm.value);
+      let reqdata = {
+        firstname: this.signupForm.value.firstname,
+        lastname: this.signupForm.value.lastname,
+        email: this.signupForm.value.email,
+        password: this.signupForm.value.confirmPassword,
+        service: "advance"
+      }
+      this.userService.register(reqdata).subscribe((result: any) => {
+        console.log("signing successfully", result)
+      })
     }
-    this.userService.register(reqdata).subscribe((result: any) => {
-      console.log("signing succefull", result)
-    })
-  }
+    else
+      console.log("data not get");
 
+  }
 }

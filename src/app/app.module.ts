@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -13,6 +12,9 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { SigninComponent } from './components/signin/signin.component';
+
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -21,13 +23,16 @@ import {HttpClientModule} from '@angular/common/http';
     SignupComponent,
     LoginComponent,
     ResetpasswordComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    SigninComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,MatFormFieldModule,MatInputModule,FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatCheckboxModule,
     BrowserAnimationsModule,
     
   ],
