@@ -15,6 +15,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { SigninComponent } from './components/signin/signin.component';
 
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -25,6 +30,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ResetpasswordComponent,
     ForgotPasswordComponent,
     SigninComponent,
+    DashboardComponent,
    
   ],
   imports: [
@@ -34,6 +40,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     HttpClientModule,
     MatCheckboxModule,
     BrowserAnimationsModule,
+    MatSidenavModule,MatListModule,
+    MatToolbarModule,
+    MatIconModule
     
   ],
   providers: [],

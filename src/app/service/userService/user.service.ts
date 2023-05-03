@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from '../httpService/http.service';
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  token: any;
 
   constructor(private httpService: HttpService) { 
+     this.token=localStorage.getItem('token')
 
   }
 
@@ -15,7 +18,13 @@ export class UserService {
     }
 
     login(reqdata:any){
-      return this.httpService.postService("userlogin",reqdata,false,{})
+      const httpOptions = {
+        headers: new HttpHeaders({
+          'Content-type': 'application/json',
+          Authorization : this.token  
+        })
+      }
+      return this.httpService.postService("userlogin",reqdata,true,httpOptions)
     }
 
     reset(reqdata:any){

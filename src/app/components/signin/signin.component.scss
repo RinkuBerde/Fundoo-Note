@@ -11,7 +11,7 @@
 
 .Div {
     border: 2.5px solid rgb(230, 230, 230);
-    height: 60%;
+    height: 40%;
     padding: 35px 78px;
     display: flex;
     align-items: center;
@@ -38,6 +38,18 @@
     padding-left: 0px;
 
 }
+
+.show{
+    display: flex;
+    justify-content: row;
+    direction: spa;
+    width: 20%;
+    height: 300px;
+    align-items: center;
+
+
+}
+
 
 @media (max-width:1025px) {
     .Container {
