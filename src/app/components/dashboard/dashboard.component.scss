@@ -7,90 +7,110 @@
   bottom: 0;
   left: 0;
   right: 0;
-  margin-bottom: 10px;
-
-
 }
 
 .example-is-mobile .example-toolbar {
   position: fixed;
-  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 2;
-  // margin-bottom: 10px;
 }
 
 h1.example-app-name {
-  margin-left: 8px;
-// border: 1px solid black;
-position: relative;
-top: 10px;
+  margin: 5px;
+  color: rgb(75, 73, 73);
+  font-size: 21px;
+}
+mat-icon {
+  color: rgb(75, 73, 73);
+}
+
+// img {
+//   width: 40px;
+// }
+.mat-toolbar.mat-primary {
+  background-color: white;
 }
 
 .example-sidenav-container {
-  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   flex: 1;
-
+  border: solid rgb(231, 231, 231) 2px;
 }
 
 .example-is-mobile .example-sidenav-container {
-  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
-     `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
-
 }
-//   .img{
-//     // border: 1px solid black;
-//     position: relative;
-//     left: 50px;
-//     height: 30px;
-//     width: 30px;
-//   }
-.settinglogo{
-//   border: 1px solid black;
-position: relative;
-cursor: pointer;
 
-left: 40px;
-height: 30px;
-width: 30px;
+mat-mdc-button-touch-target {
+  color: black;
 }
-.searchbar{
-  margin-left: 15px;
-   margin-top: 10px;
-   width: 35px;
-  //  padding: 4px 0px -9px 5px;
-  margin-bottom: -10px;
+
+.mat-toolbar.mat-primar {
+  color: black;
+}
+.material-symbols-outlined {
+  color: rgb(75, 73, 73);
+
+  padding-right: 30px;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#toolbarlogo {
+  margin-left: 250px;
+  margin-top: 10px;
+
   
 }
-.uperlogo{
+.toolIcon {
+  width: 25px;
+  color: rgb(75, 73, 73);
+}
+
+mat-nav-list {
+  width: 250px;
   position: relative;
-// margin-left: 5px;
-// margin-right: -50px;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
+  border: none;
+}
 
+.iconName {
+  position: absolute;
+  margin-left: 40px;
+}
+
+.search::placeholder {
+  font-size: medium;
+}
+
+#searchicon img {
+  background-color: white;
+  height: 45px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: 70px;
+  margin-top: 10px;
+  width: 20px;
+  background-color: rgb(246, 244, 244);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.search {
+  border: transparent;
+  width: 600px;
+  height: 45px;
+  background-color: white;
+  outline: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(246, 244, 244);
+}
+
+.mat-drawer {
+  border: none;
+  background-color: #fafafa;
+}
+.settinglogo{
+width: 25px;
+margin-left : 10px;
 }
 
 
-#logo{
-  background-image: url('https://www.shutterstock.com/image-vector/magnifying-glass-basic-vector-icon-600w-1690477978.jpg');
-  position: left;
-  padding-left: 40px;
-  background-size: 50px;
-  background-repeat: no-repeat;
-}
-@media(min-width:320px)and (max-width:1000px) {
-.header{
-  height: auto;
-     align-content: center;
-    }
-//     .settinglogo{
-// position: relative;
-// right: 100px;
-//     }
-//     .uperlogo{
-
-//     }
-}

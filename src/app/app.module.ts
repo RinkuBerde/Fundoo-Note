@@ -20,7 +20,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-
+import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
+import { CreatenoteComponent } from './components/createnote/createnote.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import {MatIconModule} from '@angular/material/icon';
     ForgotPasswordComponent,
     SigninComponent,
     DashboardComponent,
+    GetallnotesComponent,
+    CreatenoteComponent,
    
   ],
   imports: [
@@ -42,7 +46,8 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     MatSidenavModule,MatListModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule, 
+    MatCardModule
     
   ],
   providers: [],

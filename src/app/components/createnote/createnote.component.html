@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div *ngIf="show">
+        <input matInput class="title" placeholder="Title">
+        <img class="pin-img" src="../../../assets/Pin.svg">
+    </div>
+    <div class="takeNotes" (click)="showHide()">
+        <div>
+            <input matInput class="note-field" type="text" placeholder="Take a note...">
+
+        </div>
+        <div *ngIf="!show" class="Icons">
+            <button mat-icon-button matTooltip="New list">
+                <img src="../../../assets/right.svg">
+            </button>
+            <button mat-icon-button matTooltip=" New note with drawing"> <img src="../../../assets/pen.svg"></button>
+            <button mat-icon-button matTooltip=" New note with image">
+                <img src="../../../assets/image.svg"></button>
+        </div>
+    </div>
+    <div *ngIf="show" class="close-icon">
+        <div class="style-icon">
+
+        </div>
+        <div class="icon2">
+            <img class="img" src="../../../assets/rimender.svg">
+            <img class="img" src="../../../assets/add.svg">
+            <img class="img" src="../../../assets/color.svg">
+            <img class="img" src="../../../assets/img.svg">
+            <img class="img" src="../../../assets/archive.svg">
+            <img class="img" src="../../../assets/dot.svg">
+            <img class="img" src="../../../assets/backArrow.svg">
+            <img class="img" src="../../../assets/forwordArrow.svg">
+        </div>
+        <button (click)="showHide()" class="close">
+            <h4>Close</h4>
+        </button>
+    </div>
+</div>

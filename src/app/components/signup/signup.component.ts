@@ -27,11 +27,11 @@ export class SignupComponent implements OnInit {
     if (this.signupForm.valid) {
       console.log(this.signupForm.value);
       let reqdata = {
-        firstname: this.signupForm.value.firstname,
-        lastname: this.signupForm.value.lastname,
+        firstName: this.signupForm.value.firstname,
+        lastName: this.signupForm.value.lastname,
         email: this.signupForm.value.email,
-        password: this.signupForm.value.confirmPassword,
-        service: "advance"
+        password: this.signupForm.value.password,
+        "service": "advance"
       }
       this.userService.register(reqdata).subscribe((result: any) => {
         console.log("signing successfully", result)
